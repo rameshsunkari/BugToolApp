@@ -8,6 +8,7 @@ import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Repository;
 
 import com.bugtool.model.UserInfo;
+import com.bugtool.util.BugTooUtils;
 
 /**
  * Home object for domain model class UserInfo.
@@ -24,29 +25,23 @@ public class UserInfoDAO extends BaseDAO<UserInfo> {
 
 	public boolean checkUserLogin(String email, String password) {
 		boolean success = false;
-		/*email = "'" + email + "'";
-		password = "'" + password +"'";*/
+		
+		String pass = null;
+		try {
+			pass = BugTooUtils.encrypt(password);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 
-		/*
-		 * Criteria userCheckCriteria =
-		 * getCurrentSession().createCriteria(UserInfo.class);
-		 * userCheckCriteria.add(Restrictions.eq("emailid", email));
-		 * Restrictions.and(Restrictions.eq("emailid", email),
-		 * Restrictions.eq("pwwd",password)); Criterion emailId =
-		 * Restrictions.eq("emailid", email); Criterion pass =
-		 * Restrictions.eq("pwwd",password);
-		 */
-
-		success = find(Restrictions.and(Restrictions.eq("emailid", email),
-				Restrictions.eq("pswd", password))).size() > 0 ? true : false;
+		success = findByCriteria(Restrictions.and(Restrictions.eq("emailid", email),
+				Restrictions.eq("pswd", pass))).size() > 0 ? true : false;
 
 		return success;
 	}
 	
-	public List<UserInfo> find(Criterion criterion) {
-        Criteria criteria = getCurrentSession().createCriteria(UserInfo.class);
-        criteria.add(criterion);
-        return criteria.list();
-    }
+	public UserInfo findUserByEmailId(String email){
+		return (UserInfo) findByCriteria(Restrictions.eq("emailid", email)).get(0);
+	}
+	
 
 }

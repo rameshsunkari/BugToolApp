@@ -9,7 +9,8 @@
 <body>
 <a href="hello.html" id="helloLink">Say Hello</a><br/>
 <a href="welcome.html" id="welcomeLink">Say Welcome</a><br/>
-<a href="login.html" id="loginLink">Login Page</a>
+<a href="login.html" id="loginLink">Login Page</a><br/>
+<a href="userLogin.html" id="userLoginLink">User Login Page</a>
 
 </body>
 </html>

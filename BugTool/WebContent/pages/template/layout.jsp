@@ -7,13 +7,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Bug Tool</title>
-<link rel="stylesheet" type="text/css" href="<c:url value="resources/css/common-style.css"/>"/>
-<link rel="stylesheet" type="text/css" href="<c:url value="resources/css/cssLayout.css"/>"/>
-<link rel="stylesheet" type="text/css" href="<c:url value="resources/css/default.css"/>"/>
-<!-- <link rel="stylesheet" type="text/css" href="/BugTool/resources/css/common-style.css" />
-<link rel="stylesheet" type="text/css" href="/BugTool/resources/css/cssLayout.css" />
-<link rel="stylesheet" type="text/css" href="/BugTool/resources/css/default.css" />
- -->
+<link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/common-style.css"/>"/>
+<link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/cssLayout.css"/>"/>
+<link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/default.css"/>"/>
+<link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/demos.css"/>"/>
+<link rel="stylesheet" type="text/css" href="<c:url value="/resources/javascript/themes/base/jquery.ui.all.css"/>"/>
+<script type="text/javascript" src="<c:url value="/resources/javascript/jquery-1.9.1.js" />"> </script>
  </head> 
 <body>
 <div id="page">

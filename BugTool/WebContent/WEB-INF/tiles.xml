@@ -23,6 +23,10 @@
         <put-attribute name="left" value=""/>
         <put-attribute name="content" value="/pages/login.jsp" />  
      </definition>
+      <definition name="userLogin" extends="base.definition">  
+        <put-attribute name="left" value=""/>
+        <put-attribute name="content" value="/pages/userLogin.jsp" />  
+     </definition>
      <definition name="success" extends="base.definition">  
         <put-attribute name="content" value="/pages/success.jsp" />  
      </definition>
@@ -41,5 +45,14 @@
       <definition name="errorPageNotExist" extends="base.definition">  
         <put-attribute name="left" value=""/>
         <put-attribute name="content" value="/pages/errorPageNotExist.jsp" />  
+     </definition>
+     <definition name="envInfoList" extends="base.definition">  
+        <put-attribute name="content" value="/pages/envInfoList.jsp" />  
+     </definition>
+     <definition name="dbInfoList" extends="base.definition">  
+        <put-attribute name="content" value="/pages/dbInfoList.jsp" />  
+     </definition>
+     <definition name="bugInfoList" extends="base.definition">  
+        <put-attribute name="content" value="/pages/bugInfoList.jsp" />  
      </definition>
 </tiles-definitions>

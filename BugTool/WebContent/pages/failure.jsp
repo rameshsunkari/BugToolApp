@@ -5,6 +5,6 @@
 <body>
 
 	${message}
-	<a href="userLoginPage.html">Login Again</a>
+	<a href="showLoginAgain.html">Login Again</a>
 </body>
 </html>

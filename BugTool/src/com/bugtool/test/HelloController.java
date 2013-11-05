@@ -23,11 +23,6 @@ public class HelloController {
 		return modelView;
 	}
 	
-	@RequestMapping("/login")
-	public ModelAndView loginPage(){
-		return new ModelAndView("login", "message", "User Login Page");
-	}
-	
 	@RequestMapping("/")
 	public ModelAndView showIndex(){
 		return new ModelAndView("login", "message", "User Login Page");

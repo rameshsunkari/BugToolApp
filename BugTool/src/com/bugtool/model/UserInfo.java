@@ -13,7 +13,7 @@ public class UserInfo implements java.io.Serializable {
 	private String emailid;
 	private String pswd;
 	private String project;
-	private Blob pic;
+	private byte[] pic;
 
 	public UserInfo() {
 	}
@@ -29,7 +29,7 @@ public class UserInfo implements java.io.Serializable {
 	}
 
 	public UserInfo(Integer userid, String FName, String LName, String emailid,
-			String pswd, String project, Blob pic) {
+			String pswd, String project, byte[] pic) {
 		this.userid = userid;
 		this.FName = FName;
 		this.LName = LName;
@@ -87,11 +87,11 @@ public class UserInfo implements java.io.Serializable {
 		this.project = project;
 	}
 
-	public Blob getPic() {
+	public byte[] getPic() {
 		return this.pic;
 	}
 
-	public void setPic(Blob pic) {
+	public void setPic(byte[] pic) {
 		this.pic = pic;
 	}
 

@@ -22,7 +22,7 @@
 		<property name="project" type="string">
 			<column name="PROJECT" length="30" not-null="true" />
 		</property>
-		<property name="pic" type="blob">
+		<property name="pic" type="binary">
 			<column name="PIC" />
 		</property>
 	</class>

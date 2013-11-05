@@ -65,4 +65,11 @@ public class UserServiceImpl implements UserService {
 		this.userInfoDAO = userInfoDAO;
 	}
 
+
+
+	@Override
+	public UserInfo findUserByEmail(String email) {
+		return getUserInfoDAO().findUserByEmailId(email);
+	}
+
 }

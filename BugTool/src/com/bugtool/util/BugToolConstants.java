@@ -4,5 +4,6 @@ public class BugToolConstants {
 
 	public static final String USERNAME = "userName";
 	public static final String PASSWORD = "pswd";
+	public static final String user = "user";
 
 }

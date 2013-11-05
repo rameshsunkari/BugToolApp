@@ -9,5 +9,6 @@ public interface UserService {
 	public void deleteUser(UserInfo user);
 	public boolean checkUserLogin(String email, String password);
 	public UserInfo findUserById(Integer id);
+	public UserInfo findUserByEmail(String email);
 
 }
