@@ -2,16 +2,16 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-    <class name="com.bugtool.model.BugInfo" table="BUGINFO">
+    <class name="com.bugtool.model.BugInfo" table="BUG_INFO">
         <id name="id" type="java.lang.Integer">
             <column name="ID" />
-            <generator class="assigned" />
+            <generator class="increment" />
         </id>
         <property name="steps" type="java.lang.String">
             <column name="STEPS" />
         </property>
         <property name="developerEffort" type="java.lang.String">
-            <column name="DEVELOPEREFFORT" />
+            <column name="DEVELOPER_EFFORT" />
         </property>
         <property name="description" type="java.lang.String">
             <column name="DESCRIPTION" />
@@ -26,19 +26,23 @@
             <column name="WORKAROUND" />
         </property>
         <property name="technicalLearning" type="java.lang.String">
-            <column name="TECHNICALLEARNING" />
+            <column name="TECHNICAL_LEARNING" />
         </property>
         <property name="domainLearning" type="java.lang.String">
-            <column name="DOMAINLEARNING" />
+            <column name="DOMAIN_LEARNING" />
         </property>
         <property name="status" type="java.lang.String">
             <column name="STATUS" />
         </property>
         <property name="envInfo" type="java.lang.String">
-            <column name="ENVINFO" />
+            <column name="ENV_INFO" />
         </property>
-        <property name="userId" type="java.math.BigDecimal">
-            <column name="USERID" />
+        <property name="userId" type="java.lang.Integer">
+            <column name="USER_ID" />
         </property>
+        <property name="supportFile" type="binary">
+            <column name="SUPPORT_FILE" />
+        </property>
+        
     </class>
 </hibernate-mapping>

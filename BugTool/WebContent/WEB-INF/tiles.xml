@@ -55,4 +55,13 @@
      <definition name="bugInfoList" extends="base.definition">  
         <put-attribute name="content" value="/pages/bugInfoList.jsp" />  
      </definition>
+     <definition name="envInfoAdd" extends="base.definition">  
+        <put-attribute name="content" value="/pages/envInfoAdd.jsp" />  
+     </definition>
+     <definition name="dbInfoAdd" extends="base.definition">  
+        <put-attribute name="content" value="/pages/dbInfoAdd.jsp" />  
+     </definition>
+     <definition name="bugInfoAdd" extends="base.definition">  
+        <put-attribute name="content" value="/pages/bugInfoAdd.jsp" />  
+     </definition>
 </tiles-definitions>

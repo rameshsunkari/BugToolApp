@@ -1,5 +1,7 @@
 package com.bugtool.service.impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -44,6 +46,11 @@ public class EnvInfoServiceImpl implements EnvInfoService {
 
 	public void setEnvInfoDAO(EnvInfoDAO envInfoDAO) {
 		this.envInfoDAO = envInfoDAO;
+	}
+
+	@Override
+	public List<EnvInfo> getEnvironmentList() {
+		return getEnvInfoDAO().getEnvironmentList();
 	}
 
 }

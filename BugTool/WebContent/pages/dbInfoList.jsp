@@ -7,6 +7,7 @@
 <title>Database Info List</title>
 </head>
 <body>
-<h1>Database Info List</h1>
+<h1>${message}</h1>
+<a href="dbInfoAdd.html" id="dbAddLink">Add DataBase Details</a><br/>
 </body>
 </html>

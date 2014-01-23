@@ -1,5 +1,7 @@
 package com.bugtool.service;
 
+import java.util.List;
+
 import com.bugtool.model.UserInfo;
 
 public interface UserService {
@@ -10,5 +12,6 @@ public interface UserService {
 	public boolean checkUserLogin(String email, String password);
 	public UserInfo findUserById(Integer id);
 	public UserInfo findUserByEmail(String email);
+	public List<UserInfo> getUserList();
 
 }

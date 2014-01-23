@@ -1,6 +1,8 @@
 package com.bugtool.dao;
 
 
+import java.util.List;
+
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.stereotype.Repository;
@@ -23,4 +25,7 @@ public class EnvInfoDAO extends BaseDAO<EnvInfo> {
 		super(EnvInfo.class);
 	}
 
+	public List<EnvInfo> getEnvironmentList(){
+		return getEntityList();
+	}
 }

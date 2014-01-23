@@ -10,7 +10,7 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
 	<context:annotation-config />
-	<context:component-scan base-package="com.bugtool.user,com.bugtool.util,com.bugtool.test, com.bugtool.login, com.bugtool.web.validator" />
+	<context:component-scan base-package="com.bugtool.controller,com.bugtool.util,com.bugtool.test, com.bugtool.login, com.bugtool.web.validator" />
 	<bean id="tielsViewResolver"
 		class="org.springframework.web.servlet.view.UrlBasedViewResolver">
 		<property name="viewClass">
@@ -49,6 +49,13 @@
 			<ref bean="localeChangeInterceptor" />
 		</property>
 	</bean>
+	
+	<!-- Configure the multipart resolver -->
+	<bean id="multipartResolver"
+	class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="maxUploadSize" value="100000" />
+	</bean>
+	
 	<mvc:annotation-driven/> 
 	<mvc:resources mapping="/resources/**" location="/resources/" />
 </beans>

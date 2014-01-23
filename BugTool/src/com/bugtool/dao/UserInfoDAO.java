@@ -43,5 +43,8 @@ public class UserInfoDAO extends BaseDAO<UserInfo> {
 		return (UserInfo) findByCriteria(Restrictions.eq("emailid", email)).get(0);
 	}
 	
+	public List<UserInfo> getUsersList(){
+		return getEntityList();
+	}
 
 }

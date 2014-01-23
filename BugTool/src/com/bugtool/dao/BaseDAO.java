@@ -70,6 +70,11 @@ public abstract class BaseDAO<T> {
         criteria.add(criterion);
         return criteria.list();
     }
+	
+	public List<T> getEntityList(){
+		Criteria criteria = getCurrentSession().createCriteria(entityClass);
+        return criteria.list();
+	}
 
 	public Class<T> getEntityClass() {
 		return entityClass;

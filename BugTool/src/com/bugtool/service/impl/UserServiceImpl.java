@@ -1,5 +1,7 @@
 package com.bugtool.service.impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -70,6 +72,13 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public UserInfo findUserByEmail(String email) {
 		return getUserInfoDAO().findUserByEmailId(email);
+	}
+
+
+
+	@Override
+	public List<UserInfo> getUserList() {
+		return getUserInfoDAO().getUsersList();
 	}
 
 }

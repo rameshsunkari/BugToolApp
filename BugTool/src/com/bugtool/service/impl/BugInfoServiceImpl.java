@@ -1,5 +1,7 @@
 package com.bugtool.service.impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -42,6 +44,11 @@ public class BugInfoServiceImpl implements BugInfoService {
 
 	public void setBugInfoDAO(BugInfoDAO bugInfoDAO) {
 		this.bugInfoDAO = bugInfoDAO;
+	}
+
+	@Override
+	public List<BugInfo> getBugList() {
+		return getBugInfoDAO().getBugList();
 	}
 
 }
